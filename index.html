@@ -3,8 +3,10 @@
   <head>
     <title>A</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
   </head>
   <body>
     <div class="container">
@@ -15,7 +17,8 @@
             <li>|</li>
             <li><a href="#">English</a></li>
           </ul>
-          <ul style="margin-left:150px;">
+          <div class="mg-ul">
+          <ul>
             <li><a href="#">Home</a></li>
             <li>|</li>
             <li><a href="#">Giới thiệu</a></li>
@@ -24,6 +27,7 @@
             <li>|</li>
             <li><a href="#">Tuyển dụng</a></li>
           </ul>
+        </div>
           <ul>
             <span class="border-bg">
             </span>
@@ -45,12 +49,19 @@
         </header>
       </div>
       <div class="logo">
-        <img class="img-rep" src="images/logo.png">
+        <div class="logo-content">
+          <img class="img-rep" src="images/logo.png">
+        </div>
+
+        <a href="#" onclick="showMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+
       </div>
       <span class="border-nav">
       </span>
 
-      <nav>
+      <nav id="menu-nav">
         <ul>
           <li><a href="#">TRANG CHỦ</a></li>
           <li><a href="#">GIỚI THIỆU</a></li>
@@ -66,26 +77,47 @@
         <div class="item-img">
           <img class="img-repo" src="images/slideimg.png">
           <div class="img-content">
-            <div class="img-title">
+            <div class="img-title fade">
               <span>Totam rem aperiam, eaque ipsa quae</span>
             </div>
             <div class="img-txt">
               <span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam</span>
-
+            </div>
+          </div>
+        </div>
+        <div class="item-img fade" >
+          <img class="img-repo" src="images/slideimg1.jpg">
+          <div class="img-content">
+            <div class="img-title">
+              <span>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</span>
+            </div>
+            <div class="img-txt">
+              <span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam</span>
+            </div>
+          </div>
+        </div>
+        <div class="item-img fade" >
+          <img class="img-repo" src="images/slideimg.png">
+          <div class="img-content">
+            <div class="img-title">
+              <span>CCCCCCCCCCCCCCCCCCCCCCCCC</span>
+            </div>
+            <div class="img-txt">
+              <span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam</span>
             </div>
           </div>
         </div>
         <div class="left-pre">
-          <i class="fas fa-angle-left"></i>
+          <a href="#" onclick="plusSlides(-1,0)"><i class="fas fa-angle-left"></i></a>
         </div>
         <div class="right-next">
-          <i class="fas fa-angle-right"></i>
+          <a href="#" onclick="plusSlides(1,0)"><i class="fas fa-angle-right"></i></a>
         </div>
         <div class="center-button">
           <ol>
-            <li><a class="active" href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
+            <li><a class="dot active" href="#" onclick="currentSlide(1)">1</a></li>
+            <li><a class="dot active" href="#" onclick="currentSlide(2)">2</a></li>
+            <li><a class="dot active" href="#" onclick="currentSlide(3)">3</a></li>
           </ol>
         </div>
       </div>
@@ -99,15 +131,15 @@
             </div>
             <div class="tintuc-item">
               <img class="img-reposivie" src="images/tintuc2.png">
-              <span>Cùng StudyLink tham gia hội thảo nhận học bổng du học trường đại học...</span>
+              <span>Úc mở cửa Visa cho các du học sinh diện nghề.</span>
             </div>
             <div class="tintuc-item">
               <img class="img-reposivie" src="images/tintuc3.png">
-              <span>Cùng StudyLink tham gia hội thảo nhận học bổng du học trường đại học...</span>
+              <span>Tuần lễ du học - Cánh cửa mở đến tương lai</span>
             </div>
             <div class="tintuc-item">
               <img class="img-reposivie" src="images/tintuc4.png">
-              <span>Cùng StudyLink tham gia hội thảo nhận học bổng du học trường đại học...</span>
+              <span>Cơ hội học bỏng của Trường Curtin Singapore năm 2015</span>
             </div>
           </div>
         </div>
@@ -214,8 +246,8 @@
         </div>
         <div class="customer">
           <div class="customer-item">
-            <div class="customer-bubb">
-              s
+            <div class="sb sb-0">
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua . Ut enim ad minim</span>
             </div>
             <div class="customer-info">
               <div class="customer-avarta">
@@ -228,6 +260,9 @@
             </div>
           </div>
           <div class="customer-item">
+            <div class="sb sb-0">
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua . Ut enim ad minim</span>
+            </div>
             <div class="customer-info">
               <div class="customer-avarta">
                 <img src="images/customer2.png"/>
@@ -239,6 +274,9 @@
             </div>
           </div>
           <div class="customer-item">
+            <div class="sb sb-0">
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua . Ut enim ad minim</span>
+            </div>
             <div class="customer-info">
               <div class="customer-avarta">
                 <img src="images/customer3.png"/>
@@ -250,6 +288,9 @@
             </div>
           </div>
           <div class="customer-item">
+            <div class="sb sb-0">
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua . Ut enim ad minim</span>
+            </div>
             <div class="customer-info">
               <div class="customer-avarta">
                 <img src="images/customer4.png"/>
@@ -260,8 +301,6 @@
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
       <div class="logo-university">
@@ -280,7 +319,7 @@
               <img src="images/baotro3.png" class="img-reposivie"/>
             </div>
             <div class="university-item">
-              <img src="images/baotro4.png" class="img-reposivie"/>
+              <img src="images/baotro4.png" class="img-reposivie" style="max-height:110px;"/>
             </div>
             <div class="university-item">
               <img src="images/baotro5.png" class="img-reposivie"/>
@@ -316,11 +355,10 @@
           </div>
         </div>
       </div>
-
     </div>
     <footer>
       <div class="footer-content">
-        <div class="footer-item">
+        <div class="footer-item" style="width:40%;">
           <div class="item-top">
             <ul>
               <li><a href="#">Du học</a></li>
@@ -336,18 +374,53 @@
               <li><a href="#">Tuyển dụng</a></li>
             </ul>
           </div>
+          <div class="tab-menu">
+            <div class="tab">
+              <button class="tablink active" onclick="openCity(event, 'hcm')">HCM</button>
+              <button class="tablink" onclick="openCity(event, 'hn')">Hà Nội</button>
+              <button class="tablink" onclick="openCity(event, 'dn')">Đà Nẵng</button>
+              <button class="tablink" onclick="openCity(event, 'hn')">MELBOURNE</button>
+              <button class="tablink" onclick="openCity(event, 'hn')">ADELAIDE</button>
+            </div>
+            <div id="hcm" class="tabcontent" style="display:block;">
+              <span>219 Bis Nguyễn Thị Minh Khai, Quận 1, TP.HCM, Việt nam</span><br>
+              <p><i class="fas fa-phone mg-sp"></i>08 3925 6731<i class="fas fa-phone mg-sp"></i>08 3925 6731<i class="far fa-envelope mg-sp"></i>info@studylink.org</p>
+            </div>
+            <div id="hn" class="tabcontent">
+              <span>Phố Huế, TP HN</span>
+              <p><i class="fas fa-phone mg-sp"></i>08 3925 6731<i class="fas fa-phone mg-sp"></i>08 3925 6731<i class="far fa-envelope mg-sp"></i>info@studylink.org</p>
+            </div>
+            <div id="dn" class="tabcontent">
+              <span>Trần Phú, TP ĐN</span>
+              <p><i class="fas fa-phone mg-sp"></i>08 3925 6731<i class="fas fa-phone mg-sp"></i>08 3925 6731<i class="far fa-envelope mg-sp"></i>info@studylink.org</p>
+            </div>
+          </div>
         </div>
         <div class="footer-item ft-right">
           <div class="item-left">
             <h4>SUBSCRIBE</h4>
             <span>Signing up for our email updates with exciting offers and events from StudyLink</span>
+            <form>
+              <div class="input-email">
+                <i class="far fa-envelope"></i>
+                <input type="text" placeholder="Your email"><br>
+              </div>
+              <button>SEND<i class="fab fa-telegram-plane"></i></button>
+            </form>
           </div>
           <div class="item-right">
             <span>Copyrights 2014 STUDYLINK.ORG</span>
             <span>Alrights reserved.</span>
+            <h4>FOLLOW US ON</h4>
+            <span class="fllw"><i class="fab fa-facebook-f"></i>facebook.com/studylink</span>
+            <div class="logo-ft">
+              <img class="logo-footer img-reposivie" src="images/logo.png">
+            </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="js/js.js">
+    </script>
   </body>
 </html>
